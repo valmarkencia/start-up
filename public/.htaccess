@@ -18,7 +18,7 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-    # Force www on domain
-    RewriteCond %{HTTP_HOST} ^your-site.com [NC]
-    RewriteRule ^(.*)$ http://www.your-site.com/$1 [L,R=301]
+    # Force www on domain name
+    RewriteCond %{HTTP_HOST} ^valenciamark.com [NC]
+    RewriteRule ^(.*)$ http://www.valenciamark.com/$1 [L,R=301]
 </IfModule>
