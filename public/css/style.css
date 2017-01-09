@@ -1,107 +1,112 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400,700|Open+Sans:400,700,800');
-
-*, h3{
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,900');
+*{
 	margin: 0px;
 	padding: 0px;
 }
 
-body{
-	font-family: 'Roboto', sans-serif;
-}
-
-nav>ul>li{
-	display: inline-block;
-	padding: 50px 20px 20px 20px;
-	margin-left: 30px;
-	font-family: 'Open Sans', sans-serif;
-	color: #424242;
-	border-bottom: 1px #ffffff solid;
-}
-nav>ul>li:hover{
-	border-bottom: 1px #666666 solid;
-	transition: 0.8s;
-}
-
-a, a:hover, a:active, a:visited{
-	color: inherit;
-	text-decoration: none;
-}
-
 ul{
-	margin:0;
 	list-style-type: none;
 }
-.container{
-	padding:0;
+a, a:hover{
+	text-decoration: none;
+	color: inherit;
 }
-.active{
-	border-bottom: 1px #dddddd solid;
+body{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	letter-spacing: 1.2px;
 }
-.large{
+h2, h3{
+	font-weight: 300;
 	text-align: center;
-	margin-top: 12%;
-	font-size: 100px;
+	letter-spacing: 3px;
 }
-.list>li{
+.bold{
+	font-weight: 900;
+}
+.brand{
 	font-size: 20px;
-	padding: 0 0 10px 10px;
+	font-weight: 300;
 }
-.image-content
-{
-	height: 250px;/*
-	background-image: url('../img/trifold-zoowise.jpg');
-	background-repeat: no-repeat;
-	background-size: auto 100%;
-	background-position: center;*/
-	padding: 0;
-	overflow: hidden;
+.nav{
+	padding-top: 3%;
+}
+.nav a{
+	font-size: 18px;
+	font-weight: 300;
+}
+.latest-works .row{
+	width: 80%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 	margin-right: auto;
 	margin-left: auto;
 }
-.image-content>a>img
-{
-	width: auto;
-	max-height: 100%;
+.who-am-i{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
 }
-.content{
-	padding: 0 20px;
-}
-.fold{
-	height: 100vh;
-}
-.inline{
-	display: inline;
-}
-.title{
-	font-size: 25px;
-	font-weight: 900;
-	margin-top: 10%;
-}
-.description{
-	font-weight: 400;
+
+.section{
 	margin-top: 5%;
+	margin-bottom: 5%;
 }
-.body-content
-{
-	margin-top: 5%;
-}
-.fix-250{
+.thumbnail{
+	border: 1px solid #ebebeb;
 	height: 250px;
 	overflow: hidden;
-		margin-top: 5%;
+	padding: 0;
 }
-.identifier{
-	font-weight: 700;
-	vertical-align: middle;
+.thumbnail img{
+	position: relative;
+	top: -40%;
 }
-.identifier>img{
-	width: 25px;
+.description{
+	margin-right: auto;
+	margin-left: auto;
+	height: 120px;
+	width: 90%; 
 }
-.greeting{
-	letter-spacing: 3px;
-	width: 30%;
+.title img{
+	height: 25px;
+	display: block;
+	margin-bottom: 15px;
 }
-h1.title{
-	font-family: 'Hind', sans-serif;
-	font-size: 50px;
+.success{
+	background-color: #8dc63f;
+	color: white;
+	margin-top: 20px;
+}
+.btn:hover{
+	color: white;
+	background-color: #84ba3b;
+}
+.aboutme{
+	width: 65%;
+	margin-top: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+.profile{
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	overflow: hidden;
+	width: 150px;
+	height: 150px;
+}
+.profile img{
+	width: 230px;
+	position: relative;
+	left: -35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.services{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto; 
 }
