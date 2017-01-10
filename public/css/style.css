@@ -1,46 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 *{
 	margin: 0px;
 	padding: 0px;
 }
 
+
 ul{
 	list-style-type: none;
 }
-a, a:hover{
+a, a:hover, a:active{
 	text-decoration: none;
 	color: inherit;
 }
 body{
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
-	letter-spacing: 1.2px;
+	letter-spacing: 1px;
+	font-size: 13px;
 }
 h2, h3{
 	font-weight: 300;
 	text-align: center;
 	letter-spacing: 3px;
+	font-size: 25px;
 }
 .bold{
 	font-weight: 900;
 }
 .brand{
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 300;
 }
 .nav{
-	padding-top: 3%;
+	padding-top: 2%;
+	padding-bottom: 1.5%;
 }
 .nav a{
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 300;
 }
 .latest-works .row{
 	width: 80%;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 	margin-right: auto;
 	margin-left: auto;
+}
+.latest-works{
+	background-image: url('/img/bannerbg.jpg');
+	background-size: cover;
+}
+.latest-works h2{
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 }
 .who-am-i{
 	width: 80%;
@@ -49,18 +61,35 @@ h2, h3{
 }
 
 .section{
-	margin-top: 5%;
-	margin-bottom: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 .thumbnail{
 	border: 1px solid #ebebeb;
 	height: 250px;
 	overflow: hidden;
+	margin-bottom: 0;
 	padding: 0;
 }
 .thumbnail img{
 	position: relative;
 	top: -40%;
+}
+.thumbnail img:hover{
+	position: relative;
+	top: -40%;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.desc-container{;
+	background-color: #fff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.desc-container::after{
+	content: "";
+	clear: right;
+	display: table;
 }
 .description{
 	margin-right: auto;
@@ -68,19 +97,25 @@ h2, h3{
 	height: 120px;
 	width: 90%; 
 }
+.title{
+	font-weight: 400;
+	display: block;
+	color: #42B4E6;
+}
 .title img{
 	height: 25px;
 	display: block;
 	margin-bottom: 15px;
 }
 .success{
-	background-color: #8dc63f;
+	background-color: #42B4E6;
 	color: white;
 	margin-top: 20px;
 }
 .btn:hover{
 	color: white;
-	background-color: #84ba3b;
+	background-color: #359bc7;
+	transition: 0.5s;
 }
 .aboutme{
 	width: 65%;
