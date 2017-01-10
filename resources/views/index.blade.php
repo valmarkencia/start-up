@@ -8,9 +8,10 @@
 	<link rel="icon" href="/img/fav.png" type="image/png">
 </head>
 <body>
-	<div class="container">
-		<!-- nav part -->
-		<div class="nav brand">
+	
+	<!-- nav part -->
+	<div class="nav brand">
+			<div class="container">
 			<a href="/"><img class="logo" src="/img/logo.png"><span class="bold">MARK</span>VALENCIA</a>
 			<div class="pull-right">
 				<ul>
@@ -18,8 +19,8 @@
 				</ul>
 			</div>
 		</div>
-		<!-- end of nav -->
 	</div>
+		<!-- end of nav -->
 		<!-- latest project section -->
 		<div class="latest-works section">
 			<div class="container">
