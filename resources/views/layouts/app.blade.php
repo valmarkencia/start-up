@@ -12,9 +12,11 @@
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap2-toggle.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="icon" href="/img/fav.png" type="image/png">
+
     <!-- Scripts -->
     <script>
         window.Portfolio = <?php echo json_encode([
@@ -68,6 +70,9 @@
                     </li>
                     @endif
                 </ul>
+                <div class="pull-right">
+                    <input id="toggle-one" type="checkbox" checked data-toggle="toggle" data-width="80" data-height="25" data-on="Admin" data-off="User">
+                </div>
         </div>
         </div>
     </nav>
@@ -76,6 +81,13 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.js"></script>
+    <script>
+      function toggleOn() {
+        $('#toggle-one').bootstrapToggle('on')
+      }
+    </script>
     <script src="/js/app.js"></script>
 </body>
 </html>
