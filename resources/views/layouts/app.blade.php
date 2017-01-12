@@ -80,7 +80,7 @@
             <div class="logo-container">
                 <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-logo-32.png"></a>
             </div>
-            <a href="mailto:example@email.com?subject=Email%20from%20valenciamark.com">valmarkencia@gmail.com</a><br>
+            valmarkencia@gmail.com<br>
             © 2017 Valenciamark. All Rights Reserved.
         </div>
     </footer>
