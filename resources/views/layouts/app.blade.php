@@ -12,7 +12,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/css/bootstrap2-toggle.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="icon" href="/img/fav.png" type="image/png">
@@ -49,9 +48,10 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{ url('/') }}">Home</a></li>
                     @if(Auth::user())
-                     <li class="dropdown">
+                    <li><a href="{{ url('/tasks') }}">Tasks</a></li>
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                            Profile <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
@@ -70,19 +70,20 @@
                     </li>
                     @endif
                 </ul>
-                <div class="pull-right">
-                    <input id="toggle-one" type="checkbox" checked data-toggle="toggle" data-width="80" data-height="25" data-on="Admin" data-off="User">
-                </div>
-        </div>
         </div>
     </nav>
         <!-- end of nav -->
         @yield('content')
-    </div>
-
+    <footer>
+        <div class="container">
+        <div class="logo-container">
+            <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-logo-32.png"></a>
+        </div>
+            © 2017 valenciamark, All Rights Reserved.
+        </div>
+    </footer>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-toggle/2.2.2/js/bootstrap2-toggle.min.js"></script>
     <script>
       function toggleOn() {
         $('#toggle-one').bootstrapToggle('on')

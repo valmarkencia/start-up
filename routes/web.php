@@ -20,3 +20,5 @@ Route::get('portfolio', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/tasks', 'TaskController@index');

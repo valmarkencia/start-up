@@ -55,11 +55,6 @@ h2, h3{
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 }
-.who-am-i{
-	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
-}
 
 .section{
 	padding-top: 3%;
@@ -67,7 +62,7 @@ h2, h3{
 }
 .thumbnail{
 	border: 1px solid #ebebeb;
-	height: 250px;
+	height: 225px;
 	overflow: hidden;
 	margin-bottom: 0;
 	padding: 0;
@@ -99,7 +94,8 @@ h2, h3{
 	width: 90%; 
 }
 .title{
-	font-weight: 400;
+	font-weight: 900;
+	font-size: 14px;
 	display: block;
 	color: #42B4E6;
 }
@@ -118,11 +114,20 @@ h2, h3{
 	background-color: #359bc7;
 	transition: 0.5s;
 }
+
 .aboutme{
-	width: 65%;
-	margin-top: 5%;
+	width: 80%;
 	margin-right: auto;
 	margin-left: auto;
+	padding-top: 10% !important;
+	padding-bottom: 10% !important;
+}
+
+.aboutme-desc{
+	width: 65%;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
 }
 .profile{
@@ -159,4 +164,15 @@ ul.nav.navbar-nav.navbar-right {
 }
 .btn-primary{
 	background-color: #42B4E6;
+}
+footer{
+	text-align: center;
+	color: #c1c1c1;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #333333;
+}
+.logo-container{
+	padding-top: 10px;
+	padding-bottom: 10px;
 }

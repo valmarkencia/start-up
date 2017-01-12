@@ -12,7 +12,7 @@
 						</div>
 						<div class="desc-container">
 							<div class="description">
-								<span class="title"><img src="/img/perocom-logo.png"></span>
+								<span class="title"><!-- <img src="/img/perocom-logo.png"> -->Perocom Auto Pte Ltd</span>
 								Perocom Auto Pte Ltd wants to revamp their site from their old templated design.
 							
 							<a class="pull-right success btn" href="javascript:">More Details >></a>
@@ -26,7 +26,7 @@
 						</div>
 						<div class="desc-container">
 							<div class="description">
-								<span class="title"><img src="/img/little.png"></span>
+								<span class="title"><!-- <img src="/img/little.png"> -->Little Montessori Preschool</span>
 								Little Monessori preschool wants to revamp their website to a more fun, playful and creative design.
 
 							<a class="pull-right success btn" href="javascript:">More Details >></a>
@@ -39,7 +39,7 @@
 						</div>
 						<div class="desc-container">
 							<div class="description">
-								<span class="title"><img src="/img/ftl-logo.png"></span>
+								<span class="title"><!-- <img src="/img/ftl-logo.png"> -->Freelance Training London</span>
 								Freelancer Training London required me to do a wordpress design that will suit his business.
 
 							<a class="pull-right success btn" href="javascript:">More Details >></a>
@@ -52,14 +52,14 @@
 		<!-- end of latest projects section -->
 		<div class="container">
 		<!-- start of who am i section -->
-		<div class="who-am-i section">
+		<div class="aboutme section">
 			<div class="profile">
-				<img src="/img/resize.jpg">
+				<img src="/img/resize.jpg" alt="mark anthony valencia">
 			</div>
 			<h2><span class="bold">ABOUT</span> ME</h2>
-			<div class="aboutme">
+			<div class="aboutme-desc">
 				<span>
-					My name is Mark Anthony Valencia and I am a full-time freelance web designer specialized in designing web pages efficiently. I have been in the field for almost 2 years now.
+					My name is Mark Anthony Valencia and I am a web designer from the Philippines specialized in website design and development. I have been in the field for 2 years and I love what I am doing since.
 				
 				</span>
 			</div>
