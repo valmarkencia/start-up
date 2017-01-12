@@ -38,7 +38,7 @@
             </button>
             
             <!-- logo -->
-            <a href="/"><img class="logo" src="/img/logo.png"><span class="bold">MARK</span>VALENCIA</a>
+            <a href="/" class="navbar-brand"><img class="logo" src="/img/logo.png" alt="markvalencia logo"><span class="bold">MARK</span>VALENCIA</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -70,16 +70,17 @@
                     </li>
                     @endif
                 </ul>
+            </div>
         </div>
     </nav>
         <!-- end of nav -->
         @yield('content')
     <footer>
         <div class="container">
-        <div class="logo-container">
-            <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-logo-32.png"></a>
-        </div>
-            © 2017 valenciamark, All Rights Reserved.
+            <div class="logo-container">
+                <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-logo-32.png"></a>
+            </div>
+            © 2017 Valenciamark. All Rights Reserved.
         </div>
     </footer>
     <!-- Scripts -->

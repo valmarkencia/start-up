@@ -3,8 +3,6 @@
 	margin: 0px;
 	padding: 0px;
 }
-
-
 ul{
 	list-style-type: none;
 }
@@ -17,12 +15,15 @@ body{
 	font-weight: 400;
 	letter-spacing: 1px;
 	font-size: 13px;
+	color: #333333;
 }
-h2, h3{
+h2{
+	color: #6f6f6f;
+}
+h2, h3, h4{
 	font-weight: 300;
 	text-align: center;
 	letter-spacing: 3px;
-	font-size: 25px;
 }
 .bold{
 	font-weight: 900;
@@ -33,8 +34,8 @@ h2, h3{
 }
 .nav{
 	background-color: #ffffff;
-	padding-top: 2%;
-	padding-bottom: 1.5%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
 }
 .nav a{
 	font-size: 14px;
@@ -65,6 +66,8 @@ h2, h3{
 	height: 225px;
 	overflow: hidden;
 	margin-bottom: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
 	padding: 0;
 }
 .thumbnail img{
@@ -146,33 +149,57 @@ h2, h3{
 	margin-right: auto;
 }
 
-.services{
-	width: 200px;
-	margin-left: auto;
-	margin-right: auto; 
+.row.services{
+	padding-top: 5%;
+	text-align: center;
 }
 .logo{
 	width: 30px;
 	margin-right: 15px;
 }
-ul.nav.navbar-nav.navbar-right {
-    padding-top: 0;
-}
-.navbar-nav>li>a {
-    padding-top: 0;
-    padding-bottom: 0 ;
-}
 .btn-primary{
 	background-color: #42B4E6;
 }
+
 footer{
+	width: 100%;
+	position: relative;
+	bottom: 0;
 	text-align: center;
 	color: #c1c1c1;
 	padding-top: 3%;
 	padding-bottom: 3%;
-	background-color: #333333;
+	background-color: #263238;
 }
+
 .logo-container{
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+.navbar-default .navbar-toggle{
+	border-color: transparent;
+}
+.navbar-brand{
+}
+.navbar-brand>img{
+	display: inline;
+}
+.navbar-default .navbar-brand {
+    color: #333;
+}
+
+.my-services{
+	background-color: #E4E4E4;
+	background-image: url('/img/servicesbg.jpg');
+	background-size: cover;
+	padding-top: 5%;
+	padding-bottom: 10%;
+}
+
+@media screen and (max-width: 1024px){
+
+.project-container{
+	margin-bottom: 10%;
+}
+
 }
