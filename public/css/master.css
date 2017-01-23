@@ -41,8 +41,19 @@ h1, h2, h3, h4{
 .sidebar{
 	display: none;
 }
+
+.modal-dialog{
+	width: 70%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10%;
 }
 
+}
+
+/*end of mobile css*/
+
+/*desktop css*/
 @media (min-width: 768px) {
 .no-desktop li{
 	display: none;
@@ -123,6 +134,10 @@ h1, h2, h3, h4{
 nav.nav.navbar-default.bg-white.navbar-fixed-top {
     z-index: 0;
 }
+
+.modal-dialog{
+	width: 30%;
+}
 }
 
 /*end of desktop css*/
@@ -149,14 +164,10 @@ nav.nav.navbar-default.bg-white.navbar-fixed-top {
 
 .modal{
 	margin-top: 5%;
-	width: 70%;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.modal-dialog{
-	width: 30%;
-}
 
 label{
 	margin-top: 10px;
