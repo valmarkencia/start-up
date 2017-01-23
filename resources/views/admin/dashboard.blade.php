@@ -21,15 +21,15 @@
     </tr>
    </thead>
    <tbody>
-   	<tr>
    	@foreach ($users as $user)
+   	<tr>
 		<td>{{$user->id}}</td>
 		<td>{{ucwords($user->name)}}</td>
 		<td>{{$user->email}}</td>
 		<td>{{$user->permission}}</td>
 		<td>{{$user->created_at->diffForHumans()}}</td>
-	@endforeach
    	</tr>
+	@endforeach
    </tbody>
   </table>
 </div>
