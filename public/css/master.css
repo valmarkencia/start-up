@@ -26,7 +26,27 @@ h1, h2, h3, h4{
 	font-weight: 300;
 	letter-spacing: 3px;
 }
+/* For mobile phones: */
+@media (max-width: 767px) {
+[class*="col-"] {
+    width: 100%;
+}
+.sidebar img{
+	width: 20%;
+}
+.affix{
+	position: relative !important;
+}
 
+.sidebar{
+	display: none;
+}
+}
+
+@media (min-width: 768px) {
+.no-desktop li{
+	display: none;
+}
 .affix{
 	left: 0;
 	width: inherit;
@@ -39,7 +59,6 @@ h1, h2, h3, h4{
 	padding: 8vh 0;
 	z-index: 100;
 }
-
 .sidebar a{
 	display: block;
 	border-right: 3px solid #f7f7f7;
@@ -93,16 +112,6 @@ h1, h2, h3, h4{
 	margin-right: auto;
 }
 
-.content{
-	min-height: 550px;
-	width: 98%;
-	margin: 1% auto;
-	background-color: #ffffff;
-	border-radius: 5px;
-	padding: 20px;
-	margin-top: 90px;
-}
-
 .clear{
 	content: '&nbsp;';
 	clear: both;
@@ -114,7 +123,19 @@ h1, h2, h3, h4{
 nav.nav.navbar-default.bg-white.navbar-fixed-top {
     z-index: 0;
 }
+}
 
+/*end of desktop css*/
+
+.content{
+	min-height: 550px;
+	width: 98%;
+	margin: 1% auto;
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 20px;
+	margin-top: 90px;
+}
 .modal-link{
 	cursor: pointer;
 	color: #ff7070;

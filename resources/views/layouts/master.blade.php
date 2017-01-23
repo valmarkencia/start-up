@@ -39,10 +39,11 @@
     <!-- left fixed nav part -->
     <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2 ">
+        <div class="col-md-2 col-sm-3">
         <nav data-spy="affix" class="sidebar">
         		<div class="nav nav-stacked">
                     <a class="no-hover" href="{{ url('/dashboard') }}"><img src="img/logo.png"></a>
+                    <hr>
                     <a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a>
                     <hr>
                     <a class="disabled" {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a>
@@ -57,11 +58,12 @@
     <!-- end of left fixed nav -->
     <!-- start of top nav-bar -->
     
-    <div class="col-md-10 no-padding ">
+    <div class="col-md-10 col-sm-9 no-padding ">
 
     <nav class="nav navbar-default bg-white navbar-fixed-top">
         <div class="nav-content container">
             <div class="navbar-header">
+            <a href="">logo</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
@@ -77,6 +79,12 @@
                 &nbsp;
             </ul> -->
                 <ul class="nav navbar-nav navbar-right">
+                <div class="no-desktop">
+                    <li><a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    <li><a class="disabled" {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a></li>
+                    <li><a {{ setActive('tasks') }} href="{{ url('/tasks') }}">Tasks</a></li>
+                    <li><a class="disabled" {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a></li>
+                </div>
                     <li><a href="{{ url('/logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
