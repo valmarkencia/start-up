@@ -4,7 +4,7 @@
 namespace App\Http\Controllers;
 
 use App\Task;
-use Illuminate\Http\Request;
+use Request;
 
 class TaskController extends Controller
 {
@@ -14,6 +14,15 @@ class TaskController extends Controller
     }
 
     public function create(){
-    	
+    	return 'okay';
+    }
+
+    public function store()
+    {
+    	$input = Request::all();
+
+    	Task::create($input);
+
+    	return redirect('tasks'); 
     }
 }

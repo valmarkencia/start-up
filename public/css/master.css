@@ -39,23 +39,27 @@ h1, h2, h3, h4{
 }
 
 .sidebar{
+	z-index: 100;
 	display: none;
 }
 
 .modal-dialog{
-	width: 70%;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 10%;
 }
 
+.navbar-default .navbar-toggle {
+    border-color: #ddd; 
+}
 }
 
 /*end of mobile css*/
 
 /*desktop css*/
 @media (min-width: 768px) {
-.no-desktop li{
+
+li.no-desktop{
 	display: none;
 }
 .affix{
@@ -135,9 +139,6 @@ nav.nav.navbar-default.bg-white.navbar-fixed-top {
     z-index: 0;
 }
 
-.modal-dialog{
-	width: 30%;
-}
 }
 
 /*end of desktop css*/
@@ -170,9 +171,14 @@ nav.nav.navbar-default.bg-white.navbar-fixed-top {
 
 
 label{
+	font-weight: 300;
 	margin-top: 10px;
 }
 
 .disabled{
 	pointer-events: none;
+}
+
+.date{
+	border: none;
 }

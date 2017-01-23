@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/css/master.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css">
     <link rel="icon" href="/img/fav.png" type="image/png">
 
     <!-- Scripts -->
@@ -64,7 +65,7 @@
         <div class="nav-content container">
             <div class="navbar-header">
             <a href="">logo</a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -75,16 +76,14 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- <ul class="nav navbar-nav">
+<!--             <ul class="nav navbar-nav">
                 &nbsp;
             </ul> -->
                 <ul class="nav navbar-nav navbar-right">
-                <div class="no-desktop">
-                    <li><a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a></li>
-                    <li><a class="disabled" {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a></li>
-                    <li><a {{ setActive('tasks') }} href="{{ url('/tasks') }}">Tasks</a></li>
-                    <li><a class="disabled" {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a></li>
-                </div>
+                    <li class="no-desktop"><a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    <li class="no-desktop"><a class="disabled" {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a></li>
+                    <li class="no-desktop"><a {{ setActive('tasks') }} href="{{ url('/tasks') }}">Tasks</a></li>
+                    <li class="no-desktop"><a class="disabled" {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a></li>
                     <li><a href="{{ url('/logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
@@ -99,9 +98,7 @@
             </div>
         </div>
     </nav>
-    <div class="clear"></div>
     <!-- end of top nav-bar -->
-    <div class="clear"></div>
     <section class="content">
         @yield('content')
     </section>
@@ -121,12 +118,16 @@
     </div>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/js/app.js"></script>
-    <script>
-$(document).on('click',function(){
-$('.collapse').collapse('hide');
-})
+    <script src="/js/app.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript">
+        $('#datepicker').datepicker();
+        $('#datepicker').on('changeDate', function() {
+            $('#my_hidden_input').val(
+                $('#datepicker').datepicker('getFormattedDate')
+            );
+        });
+    </script>
 </script> 
 </body>
 </html>
