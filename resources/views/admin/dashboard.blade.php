@@ -9,12 +9,30 @@
 </a> to create
 
 @else
-	@foreach ($users as $user)
-		{{$user->name}}<br>
-		{{$user->email}}<br>
-		{{$user->permission}}<br>
-		{{$user->created_at}}<br>
+<div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+    	<th>ID</th>
+    	<th>Name</th>
+    	<th>Email</th>
+    	<th>Permission</th>
+    	<th>Date Registered</th>
+    </tr>
+   </thead>
+   <tbody>
+   	<tr>
+   	@foreach ($users as $user)
+		<td>{{$user->id}}</td>
+		<td>{{ucwords($user->name)}}</td>
+		<td>{{$user->email}}</td>
+		<td>{{$user->permission}}</td>
+		<td>{{$user->created_at->diffForHumans()}}</td>
 	@endforeach
+   	</tr>
+   </tbody>
+  </table>
+</div>
 @endif
 
 @endsection

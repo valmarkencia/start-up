@@ -39,7 +39,6 @@ h1, h2, h3, h4{
 }
 
 .sidebar{
-	z-index: 100;
 	display: none;
 }
 
@@ -52,6 +51,15 @@ h1, h2, h3, h4{
 .navbar-default .navbar-toggle {
     border-color: #ddd; 
 }
+.no-desktop-logo img{
+	width: 32px;
+	margin-top: 8px;
+    margin-left: 15px;
+    margin-bottom: 8px;
+}
+.table{
+	border: none;
+}
 }
 
 /*end of mobile css*/
@@ -62,6 +70,11 @@ h1, h2, h3, h4{
 li.no-desktop{
 	display: none;
 }
+
+.no-desktop-logo{
+	display: none;
+}
+
 .affix{
 	left: 0;
 	width: inherit;
@@ -181,4 +194,7 @@ label{
 
 .date{
 	border: none;
+}
+.sidebar{
+	z-index: 100;
 }

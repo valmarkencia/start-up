@@ -20,9 +20,9 @@ class TaskController extends Controller
     public function store()
     {
     	$input = Request::all();
-
+    	
     	Task::create($input);
 
-    	return redirect('tasks'); 
+    	return redirect('tasks');
     }
 }

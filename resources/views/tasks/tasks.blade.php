@@ -8,12 +8,34 @@
 </a> to create.
 
 @else
-	@foreach ($tasks as $task)
-		{{$task->title}}<br>
-		{{$task->description}}<br>
-		{{$task->importance}}<br>
-		{{ $task->due_date->diffForHumans() }}<br>
-	@endforeach
+<a class="btn btn-success" data-toggle="modal" data-target="#myModal">
+  Create
+</a>
+<div class="table-responsive">
+  <table class="table">
+  <thead>
+    <tr>
+    	<th>ID</th>
+    	<th>Title</th>
+    	<th>Description</th>
+    	<th>Priority</th>
+    	<th>Due Date</th>
+    </tr>
+   </thead>
+   <tbody>
+   	@foreach ($tasks as $task)
+   	<tr>
+		<td>{{$task->id}}</td>
+		<td>{{ucwords($task->title)}}</td>
+		<td>{{$task->description}}</td>
+		<td>{{$task->priority}}</td>
+		<td>{{$task->due_date->diffForHumans()}}</td>
+	
+   	</tr>
+   	@endforeach
+   </tbody>
+  </table>
+</div>
 @endif
 <!-- Modal -->
 <form method="POST" action="{{url('/tasks')}}">
@@ -34,14 +56,14 @@
         	<input type="text" name="title" class="form-control"><br>
         	<label name="description">Description</label>
         	<textarea rows="3" name="description" class="form-control"> </textarea>
-        	<label name="importance">Priority</label>
-        	<input type="text" name="importance" class="form-control"><br>
+        	<label name="priority">Priority</label>
+        	<input type="text" name="priority" class="form-control"><br>
         </div>
 	</div>
         <div class="col-xs-6">
 	        <label name="due_date">Due Date:  </label>
-			<input type="text" name="due_date" id="my_hidden_input" value="{{ Carbon\Carbon::now()->format('Y-m-d') }}" class="date disabled">
-	    	<div id="datepicker" data-date="{{ Carbon\Carbon::now()->format('m-d-Y') }}"></div>
+			<input type="hidden" name="due_date" id="my_hidden_input" value="{{ Carbon\Carbon::now()->format('Y-m-d') }}" class="date">
+	    	<div id="datepicker" data-date="{{ Carbon\Carbon::now()->format('Y-m-d') }}"></div>
 		</div>
 	</div>
 

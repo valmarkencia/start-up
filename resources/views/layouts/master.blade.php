@@ -64,7 +64,7 @@
     <nav class="nav navbar-default bg-white navbar-fixed-top">
         <div class="nav-content container">
             <div class="navbar-header">
-            <a href="">logo</a>
+            <a class="no-hover no-desktop-logo" href="{{ url('/dashboard') }}"><img src="img/logo.png"></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
@@ -121,7 +121,9 @@
     <script src="/js/app.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript">
-        $('#datepicker').datepicker();
+        $('#datepicker').datepicker({
+            format: 'yyyy-mm-dd'
+        });
         $('#datepicker').on('changeDate', function() {
             $('#my_hidden_input').val(
                 $('#datepicker').datepicker('getFormattedDate')
