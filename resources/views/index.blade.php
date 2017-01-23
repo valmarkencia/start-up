@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+@if(Auth::user())<div class="container">
+<h1>Logged in</h1>
+</div>
+@else
 		<!-- latest project section -->
 		<div class="latest-works section">
 			<div class="container">
@@ -90,4 +94,5 @@
 				</div>
 			</div>
 		</div>
+@endif
 @endsection

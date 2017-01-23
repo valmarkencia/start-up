@@ -17,6 +17,8 @@ Route::get('portfolio', function(){
 	return view('portfolio');
 });
 
+Route::get('/dashboard', 'AdminController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
