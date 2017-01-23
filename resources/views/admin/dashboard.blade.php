@@ -10,8 +10,9 @@
 
 @else
 	@foreach ($users as $user)
-		{{$user->name}}
-		{{$user->email}}
+		{{$user->name}}<br>
+		{{$user->email}}<br>
+		{{$user->permission}}<br>
 		{{$user->created_at}}<br>
 	@endforeach
 @endif
