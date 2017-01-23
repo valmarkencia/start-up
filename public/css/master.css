@@ -198,3 +198,17 @@ label{
 .sidebar{
 	z-index: 100;
 }
+
+.table {
+    border-bottom: 0px !important;
+}
+.table th, .table td {
+    border: 1px !important;
+}
+
+thead tr{
+	border-bottom: 1px solid #eee;
+}
+
+.table>thead>tr>th {
+    padding: 15px 15px 15px 8px;
