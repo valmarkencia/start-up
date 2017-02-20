@@ -25,3 +25,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/tasks', 'TaskController@index');
 Route::post('/tasks', 'TaskController@store');
+Route::resource('/finances', 'FinancesController');
+Route::get('proposals', 'ProposalController@index');
+Route::get('proposals/create', 'ProposalController@create');
+Route::post('proposals/create', 'ProposalController@store');
+Route::resource('projects', 'ProjectsController');

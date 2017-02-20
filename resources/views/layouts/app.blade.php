@@ -32,7 +32,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-    
+    <meta name="google-site-verification" content="YSZhC2kNnrzWqRUmwKDlu3Xmvpw4ylXUojmlslf8NT8" />
 </head>
 <body>
     

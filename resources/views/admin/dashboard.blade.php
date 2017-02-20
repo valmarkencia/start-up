@@ -3,36 +3,59 @@
 @section('content')
 
 <div>
+@if (!$users->isEmpty() && Auth::user()->permission === 'admin')
+  <div class="overview">
+    <div class="row"> 
+      <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <div class="data">
+            @if ($users->isEmpty())
+              No users yet!
+
+            @else
+            {{ $users->count() }}
+            @endif
+            </div>
+            <div class="title">
+            @if ( $users->count() == '1')
+              User
+            @else
+              Users
+            @endif
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-3">
+          <div class="data">{{ $tasks->count() }}</div>
+            <div class="title">Tasks</div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="data">
+              {{ number_format($income, 2) }}
+            </div>
+            <div class="title">
+              Income
+            </div>
+          </div>
+
+      </div>
+      </div>
+    </div>
+@endif
+  </div>
 @if ($users->isEmpty())
 	No task were created yet. Click <a class="modal-link" data-toggle="modal" data-target="#myModal">
   here
 </a> to create
 
 @else
-<div class="table-responsive">
-  <table class="table">
-  <thead>
-    <tr>
-    	<th>ID</th>
-    	<th>Name</th>
-    	<th>Email</th>
-    	<th>Permission</th>
-    	<th>Date Registered</th>
-    </tr>
-   </thead>
-   <tbody>
-   	@foreach ($users as $user)
-   	<tr>
-		<td>{{$user->id}}</td>
-		<td>{{ucwords($user->name)}}</td>
-		<td>{{$user->email}}</td>
-		<td>{{$user->permission}}</td>
-		<td>{{$user->created_at->diffForHumans()}}</td>
-   	</tr>
-	@endforeach
-   </tbody>
-  </table>
-</div>
+
+
 @endif
 
 @endsection

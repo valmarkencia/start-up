@@ -15,7 +15,7 @@ body{
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	letter-spacing: 1px;
-	font-size: 13px;
+	font-size: 12px;
 	color: #808080;
 	background-color: #e9e9e9;
 }
@@ -93,8 +93,8 @@ li.no-desktop{
 	border-right: 3px solid #f7f7f7;
 	text-decoration: none;
 	color: inherit;
-	padding-top: 8%;
-	padding-bottom: 8%;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }
 
 .sidebar a:hover{
@@ -110,7 +110,7 @@ li.no-desktop{
 }
 
 .sidebar img{
-	width: 30%;
+	width: 20%;
 }
 
 .sidebar a.no-hover{
@@ -156,6 +156,17 @@ nav.nav.navbar-default.bg-white.navbar-fixed-top {
 }
 
 /*end of desktop css*/
+
+.title{
+	font-size: 12px;
+	font-weight: 300;
+	text-align: center;
+}
+.data{
+	font-size: 20px;
+	text-align: center;
+	font-weight: 700;
+}
 
 .content{
 	min-height: 550px;
@@ -213,3 +224,35 @@ thead tr{
 
 .table>thead>tr>th {
     padding: 15px 15px 15px 8px;
+}
+.btn{
+	font-size: 12px;
+}
+.breadcrumb a:hover, .breadcrumb a:focus, .breadcrumb a{
+	text-decoration: none;
+	color: #5cb85c;
+}
+ol.breadcrumb{
+	background-color: #fff;
+}
+.form-control{
+	border-color: #d8d8d8;
+}
+.form-control:focus {
+    border-color: #d8d8d8;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(216,216,216,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(216,216,216,.6);
+}
+.milestone{
+	transition: 0.5s
+}
+textarea{
+	max-width: 100% !important;
+}
+input.form-control.milestone.price {
+    text-align: right;
+}
+.input-group-addon{
+	background-color: #ffffff;
+}

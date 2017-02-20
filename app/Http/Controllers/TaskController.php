@@ -14,7 +14,7 @@ class TaskController extends Controller
     }
 
     public function create(){
-    	return 'okay';
+    	//
     }
 
     public function store()

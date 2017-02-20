@@ -33,6 +33,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     
 </head>
 <body>
@@ -43,15 +44,17 @@
         <div class="col-md-2 col-sm-3">
         <nav data-spy="affix" class="sidebar">
         		<div class="nav nav-stacked">
-                    <a class="no-hover" href="{{ url('/dashboard') }}"><img src="img/logo.png"></a>
+                    <a class="no-hover" href="{{ url('/dashboard') }}"><img src="/img/logo.png"></a>
                     <hr>
                     <a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a>
                     <hr>
-                    <a class="disabled" {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a>
+                    <a {{ setActive('projects') }} href="{{ url('/projects') }}">Projects</a>
+                    <hr>
+                    <a {{ setActive('proposals') }} href="{{ url('/proposals') }}">Proposals</a>
                     <hr>
                     <a {{ setActive('tasks') }} href="{{ url('/tasks') }}">Tasks</a>
                     <hr>
-                    <a class="disabled" {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a>
+                    <a {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a>
                     <hr>
         		</div>
         </nav>
@@ -64,7 +67,7 @@
     <nav class="nav navbar-default bg-white navbar-fixed-top">
         <div class="nav-content container">
             <div class="navbar-header">
-            <a class="no-hover no-desktop-logo" href="{{ url('/dashboard') }}"><img src="img/logo.png"></a>
+            <a class="no-hover no-desktop-logo" href="{{ url('/dashboard') }}"><img src="/img/logo.png"></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#app-navbar-collapse">
                 <span class="sr-only">Toggle Navigation</span>
                 <span class="icon-bar"></span>
@@ -81,9 +84,10 @@
             </ul> -->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="no-desktop"><a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a></li>
-                    <li class="no-desktop"><a class="disabled" {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a></li>
+                    <li class="no-desktop"><a {{ setActive('projects') }} href="{{ url('/Projects') }}">Projects</a></li>
+                    <li class="no-desktop"><a {{ setActive('proposals') }} href="{{ url('/proposals') }}">Proposals</a></li>
                     <li class="no-desktop"><a {{ setActive('tasks') }} href="{{ url('/tasks') }}">Tasks</a></li>
-                    <li class="no-desktop"><a class="disabled" {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a></li>
+                    <li class="no-desktop"><a {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a></li>
                     <li><a href="{{ url('/logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
@@ -117,7 +121,6 @@
     </div>
     </div>
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/js/app.js"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript">
