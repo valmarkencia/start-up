@@ -26,11 +26,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::post('/sendmail', function(Request $request){
 
-	Mail::send('emails.contact', array(
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'message' => $request['message']
-        ), function ($message) {
+	Mail::send('emails.contact', $request->toArray(), function ($message) {
         $message->to('valmarkencia@gmail.com')
         		->from('valmarkencia@gmail.com', 'Valenciamark Email sender')
         		->subject('Valenciamark contact form');

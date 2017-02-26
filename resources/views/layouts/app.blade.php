@@ -92,7 +92,7 @@
                 <div style="margin-bottom:10%;">Want to make your game-changng idea come to life?  life? Contact me!</div>
                     {{csrf_field()}}
                     <input required type="text" name="name" class="form-control" placeholder="Name">
-                    <input required type="text" name="email" class="form-control" placeholder="Email">
+                    <input required type="email" name="email" class="form-control" placeholder="Email">
                     <textarea required name="message" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea>
                     <button class="btn btn-block contact" type="submit">Submit</button>
                 </form> 
