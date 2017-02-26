@@ -89,7 +89,7 @@
             </div>
             <span>
                 <form action="/sendmail" method="POST" class="form">
-                <div style="margin-bottom:10%;">Want to make your game-changng idea come to life?  life? Contact me!</div>
+                <div style="margin-bottom:10%;">Want to make your game-changing idea come to life? Contact me!</div>
                     {{csrf_field()}}
                     <input required type="text" name="name" class="form-control" placeholder="Name">
                     <input required type="email" name="email" class="form-control" placeholder="Email">
