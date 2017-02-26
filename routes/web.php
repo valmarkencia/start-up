@@ -1,5 +1,7 @@
 <?php
 
+use Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,10 +27,15 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/sendmail', function(){
 	$data = request()->all();
+
+	dd($data);
 	Mail::send('emails.contact', $data, function ($message) {
         $message->to('valmarkencia@gmail.com')
+        		->from('valmarkencia@gmail.com', 'Valenciamark Email sender');
         		->subject('Valenciamark contact form');
     });
+
+    return back();
 });
 Route::get('/tasks', 'TaskController@index');
 Route::post('/tasks', 'TaskController@store');
