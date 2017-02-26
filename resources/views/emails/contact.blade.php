@@ -4,6 +4,10 @@
 	<title></title>
 </head>
 <body>
-<h1>Welcome!</h1>
+<h1>Valenciamark Enquiry</h1>
+{{$name}}
+{{$email}}
+
+{{$message}}
 </body>
 </html>

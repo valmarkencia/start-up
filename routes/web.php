@@ -24,8 +24,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/sendmail', function(){
-	$data = [];
-	Mail::send('/emails.contact', $data, function ($message) {
+	$data = request()->all();
+	Mail::send('emails.contact', $data, function ($message) {
         $message->to('valmarkencia@gmail.com')
         		->subject('Valenciamark contact form');
     });
