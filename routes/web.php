@@ -28,7 +28,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/sendmail', function(){
 	$data = request()->all();
 
-	dd($data);
 	Mail::send('emails.contact', $data, function ($message) {
         $message->to('valmarkencia@gmail.com')
         		->from('valmarkencia@gmail.com', 'Valenciamark Email sender')
