@@ -23,6 +23,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::post('/sendemail', function(){
+	$data = request()->all();
+	Mail::send('/home', $data, function ($message) {
+        $message->from('valmarkencia@gmail.com', 'Valenciamark');
+        $message->to('valmarkencia@gmail.com');
+        $message->subject('Valenciamark contact form');
+    });
+});
 Route::get('/tasks', 'TaskController@index');
 Route::post('/tasks', 'TaskController@store');
 Route::resource('/finances', 'FinancesController');

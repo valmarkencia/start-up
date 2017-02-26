@@ -37,7 +37,7 @@
 <body>
     
     <!-- nav part -->
-    <nav class="nav navbar-default">
+    <nav class="nav navbar-default full-height">
         <div class="container">
             <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -48,15 +48,12 @@
             </button>
             
             <!-- logo -->
-            <a href="/" class="navbar-brand"><img class="logo" src="/img/logo.png" alt="markvalencia logo"><span class="bold">MARK</span>VALENCIA</a>
+            <a href="/" class="navbar-brand"><img class="logo" src="/img/logo.png" alt="valenciamark logo">Valenciamark</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-            <!-- <ul class="nav navbar-nav">
-                &nbsp;
-            </ul> -->
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{ url('/') }}">Home</a></li>
+                <ul class="navbar-nav navbar-right">
+                    <li class="active"><a href="{{ url('/') }}">Home</a></li>
                     @if(Auth::user())
                     <li><a href="{{ url('/tasks') }}">Tasks</a></li>
                     <li class="dropdown">
@@ -85,13 +82,22 @@
     </nav>
         <!-- end of nav -->
         @yield('content')
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="logo-container">
-                <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-logo-32.png"></a>
+               Follow me at <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-be-logo-01.png"></a>
             </div>
-            valmarkencia@gmail.com<br>
-            © 2017 Valenciamark. All Rights Reserved.
+            <span>
+                <form action="/sendemail" method="POST" class="form">
+                <div style="margin-bottom:10%;">Want to make your game-changng idea come to life?  life? Contact me!</div>
+                    {{csrf_field()}}
+                    <input required type="text" name="name" class="form-control" placeholder="Name">
+                    <input required type="text" name="email" class="form-control" placeholder="Email">
+                    <textarea required name="message" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea>
+                    <button class="btn btn-block contact" type="submit">Submit</button>
+                </form> 
+            </span>
+            <p style="margin-top:2%;">Copyright Valenciamark  2016 | All rights reserved.</p>
         </div>
     </footer>
     <!-- Scripts -->

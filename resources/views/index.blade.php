@@ -5,65 +5,14 @@
 <h1>Logged in</h1>
 </div>
 @else
-		<!-- latest project section -->
-		<div class="latest-works section">
-			<div class="container">
-				<h2><span class="bold">LATEST</span> WORKS</h2>
-				<div class="row">
-					<div class="col-md-4 project-container">
-						<div class="thumbnail">
-							<img src="/img/homepage2.jpg">
-						</div>
-						<div class="desc-container">
-							<div class="description">
-								<span class="title"><!-- <img src="/img/perocom-logo.png"> -->Perocom Auto Pte Ltd</span>
-								Perocom Auto Pte Ltd wants to revamp their site from their old templated design.
-							
-							<a class="pull-right success btn disabled" href="javascript:">Details coming soon >></a>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-4 project-container">
-						<div class="thumbnail">
-							<img src="/img/home-page-2nd-concept.jpg">
-						</div>
-						<div class="desc-container">
-							<div class="description">
-								<span class="title"><!-- <img src="/img/little.png"> -->Little Montessori Preschool</span>
-								Little Monessori preschool wants to revamp their website to a more fun, playful and creative design.
-
-							<a class="pull-right success btn disabled" href="javascript:">Details coming soon >></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 project-container">
-						<div class="thumbnail">
-							<img src="/img/home.jpg">
-						</div>
-						<div class="desc-container">
-							<div class="description">
-								<span class="title"><!-- <img src="/img/ftl-logo.png"> -->Freelance Training London</span>
-								Freelancer Training London required me to do a wordpress design that will suit his business.
-
-							<a class="pull-right success btn disabled" href="javascript:">Details coming soon >></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- end of latest projects section -->
 		<div class="container">
 		<!-- start of who am i section -->
 		<div class="aboutme section">
-			<div class="profile">
-				<img src="/img/resize.jpg" alt="mark anthony valencia">
-			</div>
-			<h2><span class="bold">ABOUT</span> ME</h2>
+			<h2>About Me</h2>
 			<div class="aboutme-desc">
 				<span>
-					My name is Mark Anthony Valencia and I am a web designer from the Philippines specialized in website design and development. I have been in the field for 2 years and I love what I am doing since.
+					I am a web designer/developer based in the Philippines and doing works around the world in terms of web design and development. I am dedicated and passionate designer, thinker, problem solver and developer and wants to push my skills and creativity in this field. I love doing such projects to help organizations create unique, creative and engaging products through research, UX and design.
 				
 				</span>
 			</div>
@@ -73,26 +22,81 @@
 	</div>
 		<div class="my-services section">
 			<div class="container">
-				<h2> <span class="bold">SERVICES</span></h2>
+				<h2>My Services</h2>
 				<div class="row services">
-					<div class="col-md-3">
-						<img src="/img/desktop.png">
-						<h4>WEB DESIGN</h4>
+					<div class="col-md-4">
+					<div class="services-box">
+						<h3>User Experience Design</h3>
+						<p>
+							Easy to use websites/apps can lead users know exactly what your services or business is all about. 
+						</p>
 					</div>
-					<div class="col-md-3">
-						<img class="services" src="/img/print.png">
-						<h4>PRINT DESIGN</h4>
 					</div>
-					<div class="col-md-3">
-						<img class="services" src="/img/ui.png">
-						<h4>UI/UX DESIGN</h4>
+					<div class="col-md-4">
+					<div class="services-box">
+						<h3>Web Design and Development</h3>
+						<p>
+							Good Web design will keep your viewers stay longer in your website and explore more about your business. Who wants to look to an ugly website right?
+						</p>
 					</div>
-					<div class="col-md-3">
-						<img class="services" src="/img/code.png">
-						<h4>WEB DEV</h4>
+					</div>
+					<div class="col-md-4">
+					<div class="services-box">
+						<h3>User Interface Design</h3>
+						<p>
+							Want to make your app look cool and engaging? Nobody wants to use an app that is not appealing to the eyes. 
+						</p>
+					</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="section how-i-work">
+			<div class="container">
+			<div class="row">
+			<div class="col-xs-7"></div>
+			<div class="col-xs-5">
+				<h3>How I Work</h3>
+
+				<ul class="steps">
+					<li>		
+						<span class="circle">1</span>
+						<span class="steps-text">Tell me the blueprints of the idea</span>
+					</li>
+					<li>		
+						<span class="circle">2</span>
+						<span class="steps-text">I will examine the idea carefully</span>
+					</li>
+					<li>		
+						<span class="circle">3</span>
+						<span class="steps-text">I’ll suggest solutions</span>
+					</li>
+					<li>		
+						<span class="circle">4</span>
+						<span class="steps-text">Definition of Agreement</span>
+					</li>
+					<li>		
+						<span class="circle">5</span>
+						<span class="steps-text">Design</span>
+					</li>
+					<li>		
+						<span class="circle">6</span>
+						<span class="steps-text">Development</span>
+					</li>
+					<li>		
+						<span class="circle">7</span>
+						<span class="steps-text">Test-drive</span>
+					</li>
+					<li>		
+						<span class="circle">8</span>
+						<span class="steps-text">Launch!</span>
+					</li>
+				</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+
 @endif
 @endsection
