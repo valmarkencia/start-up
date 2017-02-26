@@ -4,7 +4,10 @@
 	<title></title>
 </head>
 <body>
-<h1>Valenciamark Enquiry</h1>
+<h3>Valenciamark Enquiry</h3>
 {{ $name }}<br>
+{{ $email }}<br>
+<br>
+{{ $message }}
 </body>
 </html>
