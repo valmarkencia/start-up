@@ -31,7 +31,7 @@ Route::get('/sendmail', function(){
 	dd($data);
 	Mail::send('emails.contact', $data, function ($message) {
         $message->to('valmarkencia@gmail.com')
-        		->from('valmarkencia@gmail.com', 'Valenciamark Email sender');
+        		->from('valmarkencia@gmail.com', 'Valenciamark Email sender')
         		->subject('Valenciamark contact form');
     });
 
