@@ -23,12 +23,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/sendemail', function(){
-	$data = request()->all();
-	Mail::send('/home', $data, function ($message) {
-        $message->from('valmarkencia@gmail.com', 'Valenciamark');
-        $message->to('valmarkencia@gmail.com');
-        $message->subject('Valenciamark contact form');
+Route::get('/sendmail', function(){
+	$data = [];
+	Mail::send('/emails.contact', $data, function ($message) {
+        $message->to('valmarkencia@gmail.com')
+        		->subject('Valenciamark contact form');
     });
 });
 Route::get('/tasks', 'TaskController@index');

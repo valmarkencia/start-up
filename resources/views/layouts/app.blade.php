@@ -88,7 +88,7 @@
                Follow me at <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-be-logo-01.png"></a>
             </div>
             <span>
-                <form action="/sendemail" method="POST" class="form">
+                <form action="/sendemail" method="GET" class="form">
                 <div style="margin-bottom:10%;">Want to make your game-changng idea come to life?  life? Contact me!</div>
                     {{csrf_field()}}
                     <input required type="text" name="name" class="form-control" placeholder="Name">
