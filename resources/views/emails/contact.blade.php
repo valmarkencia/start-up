@@ -5,10 +5,10 @@
 </head>
 <body>
 <h3>Valenciamark Enquiry</h3>
-Sender Name: {{ $name }}<br>
-Sender Email: {{ $email }}<br>
+<b>Sender Name:</b> {{ $name }}<br>
+<b>Sender Email:</b> {{ $email }}<br>
 <br>
-Sender Message: <br>
+<b>Sender Message:</b> <br><br>
 {{ $msg }}
 </body>
 </html>
