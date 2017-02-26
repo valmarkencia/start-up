@@ -5,9 +5,9 @@
 </head>
 <body>
 <h1>Valenciamark Enquiry</h1>
-{{$name}}<br>
-{{$email}}<br>
+{{ $name }}<br>
+{{ $email }}<br>
 <br>
-{{$message}}
+{{ $message }}
 </body>
 </html>

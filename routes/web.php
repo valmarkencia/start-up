@@ -1,6 +1,6 @@
 <?php
 
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,10 +24,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/sendmail', function(){
-	$data = request()->all();
+Route::post('/sendmail', function(Request $request){
 
-	Mail::send('emails.contact', $data, function ($message) {
+	Mail::send('emails.contact', array(
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'message' => $request['message']
+        ), function ($message) {
         $message->to('valmarkencia@gmail.com')
         		->from('valmarkencia@gmail.com', 'Valenciamark Email sender')
         		->subject('Valenciamark contact form');
