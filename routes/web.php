@@ -28,8 +28,8 @@ Route::post('/sendmail', function(Request $request){
 
 	Mail::send('emails.contact', $request->toArray(), function ($message) {
         $message->to('valmarkencia@gmail.com')
-        		->from('valmarkencia@gmail.com', 'Valenciamark Email sender')
-        		->subject('Valenciamark contact form');
+        		->from('valmarkencia@gmail.com', 'You received a message from valenciamark.com:')
+        		->subject('Messag from valenciamark.com');
     });
 
     return back();
