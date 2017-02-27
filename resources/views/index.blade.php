@@ -9,7 +9,7 @@
 		<div class="container">
 		<!-- start of who am i section -->
 		<div class="aboutme section">
-			<h2>About Me</h2>
+			<h2>About Me<div class="title-bar">&nbsp;</div></h2>
 			<div class="aboutme-desc">
 				<span>
 					I am a web designer/developer based in the Philippines and doing works around the world in terms of web design and development. I am dedicated and passionate designer, thinker, problem solver and developer and wants to push my skills and creativity in this field. I love doing such projects to help organizations create unique, creative and engaging products through research, UX and design.
@@ -22,7 +22,7 @@
 	</div>
 		<div class="my-services section">
 			<div class="container">
-				<h2>My Services</h2>
+				<h2>My Services<div class="title-bar">&nbsp;</div></h2>
 				<div class="row services">
 					<div class="col-md-4">
 					<div class="services-box">
@@ -57,7 +57,7 @@
 			<div class="row">
 			<div class="col-md-7"></div>
 			<div class="col-md-5">
-				<h3>How I Work</h3>
+				<h3>How I Work<div class="title-bar">&nbsp;</div></h3>
 
 				<ul class="steps">
 					<li>		
