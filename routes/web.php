@@ -26,13 +26,18 @@ Route::get('/home', 'HomeController@index');
 
 Route::post('/sendmail', function(Request $request){
 
-	Mail::send('emails.contact', $request->toArray(), function ($message) {
+	$success = Mail::send('emails.contact', $request->toArray(), function ($message) {
         $message->to('valmarkencia@gmail.com')
         		->from('valmarkencia@gmail.com', 'You received a message from valenciamark.com:')
         		->subject('Message from valenciamark.com');
     });
 
-    return back();
+	if(!$success){
+		return Redirect::to(URL::previous() . "#form-response")->with('status', "Message sent! Thank you for contacting me. I'll get back to you as soon as possible. Have a nice day!");
+	}
+	else{
+		return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
+	}
 });
 Route::get('/tasks', 'TaskController@index');
 Route::post('/tasks', 'TaskController@store');

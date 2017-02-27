@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Portfolio') }}</title>
+    <title>Web Developer — {{ config('app.name', 'Portfolio') }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -82,12 +82,21 @@
     </nav>
         <!-- end of nav -->
         @yield('content')
-    <footer class="footer">
+    <footer class="footer" id="form-response">
         <div class="container">
             <div class="logo-container">
                Follow me at <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-be-logo-01.png"></a>
             </div>
             <span>
+            @if (session('status'))
+                <div class="alert alert-success form">
+                    {{ session('status') }}
+                </div>
+            @elseif(session('status'))
+                <div class="alert alert-danger form">
+                    {{ session('failed') }}
+                </div>
+            @else
                 <form action="/sendmail" method="POST" class="form">
                 <div style="margin-bottom:10%;">Want to make your game-changing idea come to life? Contact me!</div>
                     {{csrf_field()}}
@@ -96,6 +105,7 @@
                     <textarea required name="msg" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea>
                     <button class="btn btn-block contact" type="submit">Submit</button>
                 </form> 
+            @endif
             </span>
             <p style="margin-top:2%;">Copyright Valenciamark  2016 | All rights reserved.</p>
         </div>
