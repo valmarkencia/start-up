@@ -8,7 +8,7 @@
 		<!-- end of latest projects section -->
 		<div class="container">
 		<!-- start of who am i section -->
-		<div class="aboutme section">
+		<div class="aboutme section" id="about-me">
 			<h2>About Me<div class="title-bar">&nbsp;</div></h2>
 			<div class="aboutme-desc">
 				<span>

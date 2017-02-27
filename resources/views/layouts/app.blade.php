@@ -7,7 +7,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="Valenciamark is the personal website of Mark Anthony Glory Valencia that is doing website design, website development, graphic design, UX design, UI design and branding.">
+    <meta name="description" content="Mark Anthony Valencia is a creative web designer and developer. I offer web design and development, UI/UX design and graphic design.">
     <meta name="keywords" content="website design,web design,full stack developer,web developer,website developer,UI design,user interface design,UX design,user experience design,graphic design,print design,web design freelancer,mark anthony valencia,valenciamark">
 
     <title>Web Developer — {{ config('app.name', 'Portfolio') }}</title>
