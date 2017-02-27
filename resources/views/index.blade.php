@@ -55,8 +55,8 @@
 		<div class="section how-i-work">
 			<div class="container">
 			<div class="row">
-			<div class="col-xs-7"></div>
-			<div class="col-xs-5">
+			<div class="col-md-7"></div>
+			<div class="col-md-5">
 				<h3>How I Work</h3>
 
 				<ul class="steps">

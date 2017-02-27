@@ -13,23 +13,13 @@ a, a:hover, a:active{
 body{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
-	letter-spacing: 1.5px;
 	line-height: 25px;
-	font-size: 14px;
 	color: #888888;
 }
 body.btn{
 	font-size: 12px;
 }
-h2{
-	color: #888888;
-	font-size: 45px;
-	font-weight: 500: 
-}
-h3 {
-    font-size: 30px;
-    font-weight: 400;
-}
+
 h2, h3{
 	color: #888888;
 	font-weight: 400;
@@ -43,10 +33,6 @@ h4{
 .brand{
 	font-size: 16px;
 	font-weight: 300;
-}
-.nav{
-	padding-top: 4%;
-	padding-bottom: 4%;
 }
 .nav a{
 	font-size: 16px;
@@ -159,12 +145,6 @@ li.active a{
 .navbar-default .navbar-brand {
     color: #333;
 }
-.form{
-	margin-top: 1%;
-	width: 30%;
-	margin-right: auto;
-	margin-left: auto;
-}
 .my-services{
 	background-color: #E4E4E4;
 	background-image: url('/img/servicesbg.jpg');
@@ -172,28 +152,6 @@ li.active a{
 	background-attachment: fixed;
 	padding-top: 5%;
 	padding-bottom: 10%;
-}
-
-
-@media screen and (max-width: 1024px){
-
-.project-container{
-	margin-bottom: 10%;
-}
-
-}
-
-.full-height{
-	height: 100vh !important;
-	background-image: url('/img/banner.jpg');
-	background-size: cover;
-	background-attachment: fixed;
-}
-.services-box{
-	width: 80%;
-}
-.services-box p{
-	margin-top: 15%;
 }
 span.circle{
 	display: inline-block;
@@ -219,10 +177,6 @@ span.circle{
 .steps-text{
 	margin-left: 20px;
 }
-.how-i-work{
-	background-image: url('/img/how-i-work-bg.jpg');
-	background-size: cover;
-}
 .form-control{
 	margin-top: 2%;
 }
@@ -234,3 +188,118 @@ button.contact{
 button.contact:hover{
 	background-color: #ffd240;
 }
+
+/*desktop only
+
+
+
+*/
+@media screen and (min-width: 1024px){
+	body
+	{
+		font-size: 14px;
+		letter-spacing: 1.5px;
+	}
+	.full-height{
+		height: 100vh !important;
+		background-image: url('/img/banner.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	h2{
+		color: #888888;
+		font-size: 45px;
+		font-weight: 500: 
+	}
+	h3 {
+		font-size: 30px;
+		font-weight: 400;
+	}
+	.services-box p {
+	    margin-top: 15%;
+	}
+
+	.services-box{
+		width: 80%;
+	}
+
+	.how-i-work{
+		background-image: url('/img/how-i-work-bg.jpg');
+		background-size: cover;
+	}
+
+	.form{
+		margin-top: 1%;
+		width: 30%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.nav{
+		padding-top: 4%;
+		padding-bottom: 4%;
+	}
+
+}
+
+
+/*mobile
+only
+css
+
+
+
+*/
+@media screen and (max-width: 1024px){
+	body{
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+
+	.project-container{
+		margin-bottom: 10%;
+	}
+	.full-height{
+		height: 50vh !important;
+		background-image: url('/img/banner.jpg');
+		background-size: cover;
+	}
+	a.navbar-brand {
+	    padding-left: 15px;
+	    margin-top: 10px;
+	}
+	h2{
+		color: #888888;
+		font-size: 30px;
+		font-weight: 500: 
+	}
+	h3 {
+		font-size: 20px;
+	}
+	.navbar-collapse{
+		background-color: rgba(255,255,255,0.9);
+	}
+	.navbar-collapse li{
+		text-align: center;
+	}
+
+	.services-box p{
+		margin-top: 3%;
+	}
+
+	.how-i-work{
+		background-color: #ffffff;
+	}
+
+	.form{
+		margin-top: 1%;
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.navbar-header{
+		background-color: #ffffff;
+	}
+}
+/*end of mobile css*/
