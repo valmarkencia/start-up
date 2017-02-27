@@ -10,7 +10,7 @@
     <meta name="description" content="Mark Anthony Valencia is a creative web designer and developer. I offer web design and development, UI/UX design and graphic design.">
     <meta name="keywords" content="website design,web design,full stack developer,web developer,website developer,UI design,user interface design,UX design,user experience design,graphic design,print design,web design freelancer,mark anthony valencia,valenciamark">
 
-    <title>Web Developer — {{ config('app.name', 'Portfolio') }}</title>
+    <title>Valenciamark | {{ config('app.name', 'Portfolio') }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
