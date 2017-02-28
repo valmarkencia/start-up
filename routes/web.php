@@ -24,36 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/subscribe', function(Request $request){
-
-	$success = Mail::send('emails.subscribe', $request->toArray(), function ($message) {
-        $message->to('valmarkencia@gmail.com')
-        		->from('valmarkencia@gmail.com', 'You received a subsciption email from valenciamark.com:')
-        		->subject('Subscription for valenciamark.com');
-    });
-
-	if(!$success){
-		return Redirect::to(URL::previous() . "#form-response")->with('status', "Thank you for subscribing!");
-	}
-	else{
-		return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
-	}
-});
-Route::post('/sendmail', function(Request $request){
-
-	$success = Mail::send('emails.contact', $request->toArray(), function ($message) {
-        $message->to('valmarkencia@gmail.com')
-        		->from('valmarkencia@gmail.com', 'You received a message from valenciamark.com:')
-        		->subject('Message from valenciamark.com');
-    });
-
-	if(!$success){
-		return redirect()->back()->with('sent-mail', "Message sent! Thank you for contacting me. I'll get back to you as soon as possible. Have a nice day!");
-	}
-	else{
-		return redirect()->back()->with('error', "Something went wrong. Please try again later!");
-	}
-});
+Route::post('/subscribe', 'EmailController@subscribe');
+Route::post('/sendmail', 'EmailController@sendmail');
 
 Route::get('/contact', 'IndexController@contact');
 Route::get('/tasks', 'TaskController@index');

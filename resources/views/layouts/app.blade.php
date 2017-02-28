@@ -107,9 +107,13 @@
                 <form action="/subscribe" method="POST" class="form">
                 <div style="margin-bottom:10%;">Want to get updates on my works and future projects? Subscribe now!</div>
                     {{csrf_field()}}
-                    <input required type="text" name="name" autocomplete="off" class="form-control" placeholder="Name">
-                    <input required type="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
-                    <!-- <textarea required name="msg" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea> -->
+                    <input required type="text" value="{{ old('name') }}" name="name" autocomplete="off" class="form-control" placeholder="Name">
+                    <input required type="email" value="{{ old('email') }}" name="email" autocomplete="off" class="form-control" placeholder="Email">
+                    @if(session('email-exist'))
+                    <div class="alert alert-danger">
+                        {{session('email-exist')}}
+                    </div>
+                    @endif
                     <button class="btn btn-block contact" type="submit">Subscribe</button>
                 </form> 
             @endif

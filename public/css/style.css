@@ -34,7 +34,7 @@ h4{
 	font-weight: 300;
 }
 .nav a{
-	font-size: 16px;
+	font-size: 14px;
 }
 li.active a{
 	font-weight: 500;
@@ -250,6 +250,9 @@ button.contact:hover{
 	.contact-page{
 		width: 30%;
 		padding-top: 2% !important;
+	}
+	.alert{
+		margin-top: 10px;
 	}
 
 }
