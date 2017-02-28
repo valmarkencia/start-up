@@ -35,10 +35,9 @@ h4{
 }
 .nav a{
 	font-size: 16px;
-	font-weight: 400;
 }
 li.active a{
-	font-weight: 400;
+	font-weight: 500;
 	background-color: transparent !important;
 }
 .section{
@@ -129,6 +128,10 @@ li.active a{
 }
 .navbar-default .navbar-brand {
     color: #333;
+}
+
+.navbar-default{
+	background-color: #ffffff;
 }
 .my-services{
 	background-color: #E4E4E4;
@@ -235,7 +238,14 @@ button.contact:hover{
 
 	.nav{
 		padding-top: 4%;
-		padding-bottom: 4%;
+	}
+
+	.nav-links li{
+		margin-left: 60px;
+	}
+
+	.nav-link li a{
+		font-weight: 300;
 	}
 
 }
@@ -308,6 +318,14 @@ css
 
 	.navbar-header{
 		background-color: #ffffff;
+	}
+
+	.nav-links li{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.navbar-collapse{
+		padding-bottom: 10px;
 	}
 }
 /*end of mobile css*/

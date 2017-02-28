@@ -1,12 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-@if(Auth::user())<div class="container">
-<h1>Logged in</h1>
-</div>
-@else
 		<!-- end of latest projects section -->
-		<div class="container">
+	<div class="container">
 		<!-- start of who am i section -->
 		<div class="aboutme section" id="about-me">
 			<h2>About Me<div class="title-bar">&nbsp;</div></h2>
@@ -98,5 +94,4 @@
 			</div>
 		</div>
 
-@endif
 @endsection

@@ -39,7 +39,11 @@
 <body>
     
     <!-- nav part -->
+    @if(url()->current() == url('/'))
     <nav class="nav navbar-default full-height">
+    @else
+    <nav class="nav navbar-default">
+    @endif
         <div class="container">
             <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -54,8 +58,9 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <ul class="navbar-nav navbar-right">
-                    <li class="active"><a href="{{ url('/') }}">Home</a></li>
+                <ul class="navbar-nav nav-links navbar-right">
+                    <li {{ setActive('/') }}><a href="{{ url('/') }}">Home</a></li>
+                    <li {{ setActive('contact') }}><a href="{{ url('/contact') }}">Contact</a></li>
                     @if(Auth::user())
                     <li><a href="{{ url('/tasks') }}">Tasks</a></li>
                     <li class="dropdown">
@@ -99,13 +104,13 @@
                     {{ session('failed') }}
                 </div>
             @else
-                <form action="/sendmail" method="POST" class="form">
-                <div style="margin-bottom:10%;">Want to make your game-changing idea come to life? Contact me!</div>
+                <form action="/subscribe" method="POST" class="form">
+                <div style="margin-bottom:10%;">Want to get updates on my works and future projects? Subscribe now!</div>
                     {{csrf_field()}}
-                    <input required type="text" name="name" class="form-control" placeholder="Name">
-                    <input required type="email" name="email" class="form-control" placeholder="Email">
-                    <textarea required name="msg" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea>
-                    <button class="btn btn-block contact" type="submit">Submit</button>
+                    <input required type="text" name="name" autocomplete="off" class="form-control" placeholder="Name">
+                    <input required type="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
+                    <!-- <textarea required name="msg" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea> -->
+                    <button class="btn btn-block contact" type="submit">Subscribe</button>
                 </form> 
             @endif
             </span>

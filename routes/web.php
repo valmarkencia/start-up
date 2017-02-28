@@ -24,6 +24,21 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::post('/subscribe', function(Request $request){
+
+	$success = Mail::send('emails.subscribe', $request->toArray(), function ($message) {
+        $message->to('valmarkencia@gmail.com')
+        		->from('valmarkencia@gmail.com', 'You received a subsciption email from valenciamark.com:')
+        		->subject('Subscription for valenciamark.com');
+    });
+
+	if(!$success){
+		return Redirect::to(URL::previous() . "#form-response")->with('status', "Thank you for subscribing!");
+	}
+	else{
+		return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
+	}
+});
 Route::post('/sendmail', function(Request $request){
 
 	$success = Mail::send('emails.contact', $request->toArray(), function ($message) {
@@ -39,6 +54,8 @@ Route::post('/sendmail', function(Request $request){
 		return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
 	}
 });
+
+Route::get('/contact', 'IndexController@contact');
 Route::get('/tasks', 'TaskController@index');
 Route::post('/tasks', 'TaskController@store');
 Route::resource('/finances', 'FinancesController');
