@@ -6,6 +6,16 @@
 		<div class="container">
 			<div class="section" id="about-me" style="width: 30%; padding-top: 2%;">
 				<h2>Contact<div class="title-bar">&nbsp;</div></h2>
+				 @if (session('sent-mail'))
+				 <div>
+                    {{ session('sent-mail') }}
+                </div>
+				 @elseif(session('error'))
+				 <div>
+                    {{ session('error') }}
+                </div>
+
+				 @else
 				<form action="/sendmail" method="POST">
                 <div style="margin-bottom:10%;">Want to make your game-changing idea come to life? Contact me!</div>
                     {{csrf_field()}}
@@ -13,7 +23,8 @@
                     <input required type="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
                     <textarea required name="msg" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea>
                     <button class="btn btn-block contact" type="submit">Send</button>
-                </form> 
+                </form>
+                @endif 
 			</div>
 		</div>
 	

@@ -99,7 +99,7 @@
                 <div class="alert alert-success form">
                     {{ session('status') }}
                 </div>
-            @elseif(session('status'))
+            @elseif(session('failed'))
                 <div class="alert alert-danger form">
                     {{ session('failed') }}
                 </div>

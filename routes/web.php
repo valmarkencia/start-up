@@ -48,10 +48,10 @@ Route::post('/sendmail', function(Request $request){
     });
 
 	if(!$success){
-		return Redirect::to(URL::previous() . "#form-response")->with('status', "Message sent! Thank you for contacting me. I'll get back to you as soon as possible. Have a nice day!");
+		return redirect()->back()->with('sent-mail', "Message sent! Thank you for contacting me. I'll get back to you as soon as possible. Have a nice day!");
 	}
 	else{
-		return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
+		return redirect()->back()->with('error', "Something went wrong. Please try again later!");
 	}
 });
 
