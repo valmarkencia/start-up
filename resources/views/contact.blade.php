@@ -4,7 +4,7 @@
 		<!-- end of latest projects section -->
 		<div style="background-image: url('/img/contact-bg.jpg'); background-size: cover;">
 		<div class="container">
-			<div class="section" id="about-me" style="width: 30%; padding-top: 2%;">
+			<div class="section contact-page" id="about-me">
 				<h2>Contact<div class="title-bar">&nbsp;</div></h2>
 				 @if (session('sent-mail'))
 				 <div>

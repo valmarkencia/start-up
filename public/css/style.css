@@ -247,6 +247,10 @@ button.contact:hover{
 	.nav-link li a{
 		font-weight: 300;
 	}
+	.contact-page{
+		width: 30%;
+		padding-top: 2% !important;
+	}
 
 }
 
@@ -265,6 +269,10 @@ css
 		line-height: 170%;
 	}
 
+	.contact-page{
+		width: 80%;
+		padding-top: 2% !important;
+	}
 	.title-bar{
 		width: 15%;
 		max-height: 2px !important;
