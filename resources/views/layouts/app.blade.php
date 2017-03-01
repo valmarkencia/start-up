@@ -33,7 +33,9 @@
         {
           "@context": "http://schema.org",
           "@type": "WebPage",
-          "url": "http://www.valenciamark.com"
+          "brand": "valenciamark",
+          "url": "https://www.valenciamark.com",
+          "description": "Mark Anthony Valencia is a creative web designer and developer. I offer web design and development, UI/UX design and graphic design."
         }
     </script>
     <script>
