@@ -71,6 +71,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <ul class="navbar-nav nav-links navbar-right">
                     <li {{ setActive('/') }}><a href="{{ url('/') }}">Home</a></li>
+                    <li {{ setActive('works') }}><a href="{{ url('/works') }}">Works</a></li>
                     <li {{ setActive('contact') }}><a href="{{ url('/contact') }}">Contact</a></li>
                     @if(Auth::user())
                     <li><a href="{{ url('/tasks') }}">Tasks</a></li>

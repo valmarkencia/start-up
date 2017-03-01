@@ -36,6 +36,17 @@ h4{
 .nav a{
 	font-size: 14px;
 }
+.showcase{
+	padding: 0; 
+	height: 60vh;
+	overflow: hidden;
+}
+
+.showcase img{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
 li.active a{
 	font-weight: 500;
 	background-color: transparent !important;
@@ -44,7 +55,7 @@ li.active a{
 	padding-top: 8%;
 	padding-bottom: 8%;
 }
-.desc-container{;
+.desc-container{
 	background-color: #fff;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -94,7 +105,14 @@ li.active a{
 	margin-left: auto;
 	margin-right: auto;
 }
-
+.note{
+	text-align: center;
+	color: red;
+	padding: 20px 0;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
 .logo{
 	width: 30px;
 	margin-right: 15px;

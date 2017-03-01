@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@index');
 Route::post('/subscribe', 'EmailController@subscribe');
 Route::post('/sendmail', 'EmailController@sendmail');
 
+Route::get('/works', 'IndexController@works');
 Route::get('/contact', 'IndexController@contact');
 Route::get('/tasks', 'TaskController@index');
 Route::post('/tasks', 'TaskController@store');
