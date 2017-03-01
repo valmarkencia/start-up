@@ -21,25 +21,25 @@
 				<h2>My Services<div class="title-bar">&nbsp;</div></h2>
 				<div class="row services">
 					<div class="col-md-4">
-					<div class="services-box">
-						<h3>User Experience Design</h3>
-						<p>
+					<div itemscope itemtype="http://schema.org/Product" class="services-box">
+						<h3 itemprop="name">User Experience Design</h3>
+						<p itemprop="description">
 							Easy to use websites/apps can lead users know exactly what your services or business is all about. 
 						</p>
 					</div>
 					</div>
-					<div class="col-md-4">
+					<div itemscope itemtype="http://schema.org/Product" class="col-md-4">
 					<div class="services-box">
-						<h3>Web Design and Development</h3>
-						<p>
+						<h3 itemprop="name">Web Design and Development</h3>
+						<p itemprop="description">
 							Good Web design will keep your viewers stay longer in your website and explore more about your business. Who wants to look to an ugly website right?
 						</p>
 					</div>
 					</div>
-					<div class="col-md-4">
+					<div itemscope itemtype="http://schema.org/Product" class="col-md-4">
 					<div class="services-box">
-						<h3>User Interface Design</h3>
-						<p>
+						<h3 itemprop="name">User Interface Design</h3>
+						<p itemprop="description">
 							Want to make your app look cool and engaging? Nobody wants to use an app that is not appealing to the eyes. 
 						</p>
 					</div>

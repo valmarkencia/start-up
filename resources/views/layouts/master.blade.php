@@ -45,6 +45,9 @@
         <nav data-spy="affix" class="sidebar">
         		<div class="nav nav-stacked">
                     <a class="no-hover" href="{{ url('/dashboard') }}"><img src="/img/logo.png"></a>
+                    <div itemscope itemtype="http://schema.org/Organization">
+                        <a itemprop="url" href="{{ url('/dashboard') }}" class="no-hover"><img itemprop="logo" src="/img/logo.png" alt="valenciamark logo">Valenciamark</a>
+                    </div>
                     <hr>
                     <a {{ setActive('dashboard') }} href="{{ url('/dashboard') }}">Dashboard</a>
                     <hr>

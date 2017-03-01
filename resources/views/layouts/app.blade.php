@@ -29,6 +29,13 @@
       ga('send', 'pageview');
 
     </script>
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "WebPage",
+          "url": "http://www.valenciamark.com"
+        }
+    </script>
     <script>
         window.Portfolio = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -54,7 +61,9 @@
             </button>
             
             <!-- logo -->
-            <a href="/" class="navbar-brand"><img class="logo" src="/img/logo.png" alt="valenciamark logo">Valenciamark</a>
+            <div itemscope itemtype="http://schema.org/Organization">
+                <a itemprop="url" href="{{ url('/') }}" class="navbar-brand"><img itemprop="logo" class="logo" src="/img/logo.png" alt="valenciamark logo">Valenciamark</a>
+            </div>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -92,7 +101,10 @@
     <footer class="footer" id="form-response">
         <div class="container">
             <div class="logo-container">
-               Follow me at <a href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-be-logo-01.png"></a>
+            <span itemscope itemtype="http://schema.org/Organization"><br>
+            <link itemprop="url" href="https://www.valmarkencia.com"> <br>
+               Follow me at <a itemprop="sameAs" href="https://www.behance.net/valmarkencia" target="_blank"><img src="/img/behance-be-logo-01.png"></a>
+            </span>
             </div>
             <span>
             @if (session('status'))
