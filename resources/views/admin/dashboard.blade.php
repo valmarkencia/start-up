@@ -8,7 +8,23 @@
     <div class="row"> 
       <div class="col-sm-6"></div>
       <div class="col-sm-6">
-          <div class="col-sm-3"></div>
+          <div class="col-sm-3">
+            <div class="data">
+            @if ($users->isEmpty())
+              No users yet!
+
+            @else
+            {{ $users->count() }}
+            @endif
+            </div>
+            <div class="title">
+            @if ( $users->count() == '1')
+              Subscriber
+            @else
+              Subscribers
+            @endif
+            </div>
+          </div>
           <div class="col-sm-3">
             <div class="data">
             @if ($users->isEmpty())
