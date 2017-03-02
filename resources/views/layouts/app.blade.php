@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="Mark Anthony Valencia is a creative web designer and developer. I offer web design and development, UI/UX design and graphic design.">
-    <meta name="keywords" content="website design,web design,full stack developer,web developer,website developer,UI design,user interface design,UX design,user experience design,graphic design,print design,web design freelancer,mark anthony valencia,valenciamark">
+    <meta name="keywords" content="website design,web design,full stack developer,web developer,website developer,UI design,user interface design,UX design,user experience design,graphic design,print design,web design freelancer,mark anthony valencia,valenciamark, Philippines web designer">
 
     <title>Valenciamark | {{ config('app.name', 'Portfolio') }}</title>
 
@@ -35,7 +35,7 @@
           "@type": "WebPage",
           "brand": "valenciamark",
           "url": "https://www.valenciamark.com",
-          "description": "Mark Anthony Valencia is a creative web designer and developer. I offer web design and development, UI/UX design and graphic design."
+          "description": "I am creative web designer and developer. I offer web design and development, UI/UX design and graphic design."
         }
     </script>
     <script>

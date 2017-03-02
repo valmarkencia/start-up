@@ -7,7 +7,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-3 showcase" ">
-				<img src="/img/presentation.jpg" style="width: 100%;" alt="valenciamark.com design concept">
+				<img src="/img/presentation.jpg" alt="valenciamark.com design concept">
 			</div>
 			<div class="col-md-3 showcase">
 				<img src="/img/zoowise-poster.jpg" alt="zoowise poster design">
