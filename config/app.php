@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://valmarkencia.com'),
+    'url' => env('APP_URL', 'https://www.valmarkencia.com'),
 
     /*
     |--------------------------------------------------------------------------
