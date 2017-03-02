@@ -90,13 +90,13 @@
                     <li class="no-desktop"><a {{ setActive('proposals') }} href="{{ url('/proposals') }}">Proposals</a></li>
                     <li class="no-desktop"><a {{ setActive('tasks') }} href="{{ url('/tasks') }}">Tasks</a></li>
                     <li class="no-desktop"><a {{ setActive('finances') }} href="{{ url('/finances') }}">Finances</a></li>
-                    <li><a href="{{ url('/logout') }}"
+                    <li><a href="{{ secure_url('/logout') }}"
                             onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                             Logout
                         </a>
 
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                        <form id="logout-form" action="{{ secure_url('/logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
                     </li>
