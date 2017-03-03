@@ -16,7 +16,7 @@
 				<img src="/img/homepage concept 2.jpg" alt="perocom website design">
 			</div>
 			<div class="col-md-3 showcase">
-				<img src="/img/home.jpg" alt="freelancer training london website design">
+				<img src="/img/presentftl.jpg" alt="freelancer training london website design">
 			</div>
 		</div>
 		

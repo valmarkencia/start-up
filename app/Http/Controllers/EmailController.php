@@ -36,6 +36,13 @@ class EmailController extends Controller
 
     public function subscribe(Request $request)
     {
+    	Mail::send('emails.subscription', $request->toArray(), function ($message) use ($request)
+		    	{
+			        $message->to($request->email)
+			        		->from('mark@valenciamark.com', 'Valenciamark admin')
+			        		->subject('Thank you for subscribing to Valenciamark');
+				});
+    	
     	$success = Mail::send('emails.subscribe', $request->toArray(), function ($message)
     	{
 	        $message->to('valmarkencia@gmail.com')
@@ -43,7 +50,16 @@ class EmailController extends Controller
 	        		->subject('Subscription for valenciamark.com');
 		});
 
+
 			if(!$success){
+
+				Mail::send('emails.subscription', $request->toArray(), function ($message)
+		    	{
+			        $message->to($request['email'])
+			        		->from('mark@valenciamark.com', 'Valenciamark admin')
+			        		->subject('Thank you for subscribing to Valenciamark');
+				});
+
 				$email = new Email;
 				$email->msg = $request['msg'];
 				$check_email = Email::where('email', $request['email'])->firstOrFail();
