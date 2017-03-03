@@ -42,7 +42,7 @@ class EmailController extends Controller
 			        		->from('mark@valenciamark.com', 'Valenciamark admin')
 			        		->subject('Thank you for subscribing to Valenciamark');
 				});
-    	
+
     	$success = Mail::send('emails.subscribe', $request->toArray(), function ($message)
     	{
 	        $message->to('valmarkencia@gmail.com')
@@ -55,7 +55,7 @@ class EmailController extends Controller
 
 				Mail::send('emails.subscription', $request->toArray(), function ($message)
 		    	{
-			        $message->to($request['email'])
+			        $message->to('valmarkencia@gmail.com')
 			        		->from('mark@valenciamark.com', 'Valenciamark admin')
 			        		->subject('Thank you for subscribing to Valenciamark');
 				});
