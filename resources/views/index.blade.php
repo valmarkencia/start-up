@@ -8,7 +8,7 @@
 			<h2>Who Am I<div class="title-bar">&nbsp;</div></h2>
 			<div class="aboutme-desc">
 				<span>
-					I am a freelance UX/UI designer in Southeast Asia. I like to give my client a valuable work and would never compromise quality to just get things done. I put a lot of effort to make my product efficient in the best way possible. I am advancing my skills in every project I got to further meet my client's needs. I never settle to things I am comfortable with, every client is different therefore every client needs different solutions.
+					I am a freelance UX/UI designer in Southeast Asia. I like to give my clients a valuable work and would never compromise quality to just get things done. I put a lot of effort to make my product efficient in the best way possible. I am advancing my skills in every project I got to further meet my client's needs. I never settle to things I am comfortable with, every client is different therefore every client needs different solutions.
 				</span>
 			</div>
 		</div>
