@@ -5,11 +5,10 @@
 	<div class="container">
 		<!-- start of who am i section -->
 		<div class="aboutme section" id="about-me">
-			<h2>About Me<div class="title-bar">&nbsp;</div></h2>
+			<h2>Who Am I<div class="title-bar">&nbsp;</div></h2>
 			<div class="aboutme-desc">
 				<span>
-					I am a web designer/developer based in the Philippines and doing works around the world in terms of web design and development. I am dedicated and passionate designer, thinker, problem solver and developer and wants to push my skills and creativity in this field. I love doing such projects to help organizations create unique, creative and engaging products through research, UX and design.
-				
+					I am a freelance UX/UI designer in Southeast Asia. I like to give my client a valuable work and would never compromise quality to just get things done. I put a lot of effort to make my product efficient in the best way possible. I am advancing my skills in every project I got to further meet my client's needs. I never settle to things I am comfortable with, every client is different therefore every client needs different solutions.
 				</span>
 			</div>
 		</div>
