@@ -189,7 +189,7 @@ span.circle{
 button.contact{
 	background-color: #fcdb6f;
 	margin-top: 2%;
-	color: #ffffff;
+	color: #23282b;
 }
 button.contact:hover{
 	background-color: #ffd240;
@@ -207,12 +207,6 @@ button.contact:hover{
 		letter-spacing: 1.5px;
 		line-height: 25px;
 	}
-	.full-height{
-		height: 100vh !important;
-		background-image: url('/img/banner.jpg');
-		background-size: cover;
-		background-attachment: fixed;
-	}
 	h2{
 		color: #888888;
 		font-size: 45px;
@@ -221,6 +215,12 @@ button.contact:hover{
 	h3 {
 		font-size: 30px;
 		font-weight: 400;
+	}
+
+	.full-height{
+		height: 100vh !important;
+		background-image: url('/img/banner.jpg');
+		background-size: cover;
 	}
 
 	.title-bar{

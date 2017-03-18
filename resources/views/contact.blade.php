@@ -14,13 +14,12 @@
 				 <div>
                     {{ session('error') }}
                 </div>
-
 				 @else
 				<form action="/sendmail" method="POST">
-                <div style="margin-bottom:10%;">Want to make your game-changing idea come to life? Contact me!</div>
+                <div style="margin-bottom:10%;">Want to make your game-changing idea come to life? Work with me!</div>
                     {{csrf_field()}}
-                    <input required type="text" name="name" autocomplete="off" class="form-control" placeholder="Name">
-                    <input required type="email" name="email" autocomplete="off" class="form-control" placeholder="Email">
+                    <input required type="text" name="name" class="form-control" placeholder="Name">
+                    <input required type="email" name="email" class="form-control" placeholder="Email">
                     <textarea required name="msg" class="form-control" placeholder="Message" rows="3" style="max-width: 100% !important;"></textarea>
                     <button class="btn btn-block contact" type="submit">Send</button>
                 </form>
