@@ -24,8 +24,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('/subscribe', 'EmailController@subscribe');
 Route::post('/sendmail', 'EmailController@sendmail');
+Route::post('/subscribe', 'EmailController@subscribe');
 
 Route::get('/works', 'IndexController@works');
 Route::get('/contact', 'IndexController@contact');

@@ -100,7 +100,16 @@
         </div>
     </nav>
         <!-- end of nav -->
+        <!-- Loading screen -->
+        <div class="loading">
+            <div class="loading-content">
+                <span>Please wait...</span><br>
+                <img src="/img/ring.gif">
+            </div>
+        </div>
+        <div class="content-loaded">
         @yield('content')
+        </div>
     <footer class="footer" id="form-response">
         <div class="container">
             <div class="logo-container">
@@ -110,6 +119,9 @@
             </span>
             </div>
             <span>
+            <div class="alert alert-success form" id="subs-success">
+                Thank you for subscribing!
+            </div>
             @if (session('status'))
                 <div class="alert alert-success form">
                     {{ session('status') }}
@@ -119,17 +131,20 @@
                     {{ session('failed') }}
                 </div>
             @else
-                <form action="/subscribe" method="POST" class="form">
+                <form action="/subscribe" method="POST" class="form" id="sub-form">
                 <div style="margin-bottom:10%;">Want to get updates on my works and future projects? Subscribe now!</div>
                     {{csrf_field()}}
                     <input required type="text" value="{{ old('name') }}" name="name" class="form-control" placeholder="Name">
-                    <input required type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email">
+                    <input required type="email" name="email" class="form-control" placeholder="Email">
+                    <div class="alert alert-danger" id="email-error">
+                        Email already exists. Please use another email
+                    </div>
                     @if(session('email-exist'))
                     <div class="alert alert-danger">
                         {{session('email-exist')}}
                     </div>
                     @endif
-                    <button class="btn btn-block contact" type="submit">Subscribe</button>
+                    <button id="subcription-button" class="btn btn-block contact" type="submit">Subscribe</button>
                 </form> 
             @endif
             </span>
@@ -140,5 +155,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('a').on('click', function(){
+                $('.content-loaded, nav , .footer').css('display', 'none');
+                $('.loading').css('display', 'block').fadeout();
+            });
+
+            $('#sub-form').submit(function(e){
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    method: 'POST',
+                    url: '/subscribe',
+                    data: data,
+                    success: function(response)
+                    {
+                        if(response === $('input[name=email]').val())
+                        {
+                            $('#email-error').css('display', 'block');
+                            $('input[name=email]').keydown(function(){
+                                $('#email-error').removeAttr( 'style' );
+                            });
+                        }
+                        else if(response === 'success')
+                        {
+                            $('#subs-success').css('display', 'block');
+                            $('#sub-form').css('display', 'none');
+                        }
+                    }
+                })
+            });
+        });
+    </script>
 </body>
 </html>

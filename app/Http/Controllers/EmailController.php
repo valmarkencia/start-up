@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Email;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -36,46 +35,58 @@ class EmailController extends Controller
 
     public function subscribe(Request $request)
     {
-    	Mail::send('emails.subscription', $request->toArray(), function ($message) use ($request)
-		    	{
-			        $message->to($request->email)
-			        		->from('mark@valenciamark.com', 'Valenciamark admin')
-			        		->subject('Thank you for subscribing to Valenciamark');
-				});
+		$check_email = Email::where('email', $request['email'])->get();
+    	if($request->ajax())
+		{
+				if(count($check_email) > 0)
+				{
+					return $request['email'];
+				}
+				else
+				{
+					$success = Mail::send('emails.subscribe', $request->toArray(), function ($message)
+						{
+				        	$message->to('valmarkencia@gmail.com')
+				        		->from('valmarkencia@gmail.com', 'You received a subsciption email from valenciamark.com:')
+				        		->subject('Subscription for valenciamark.com');
+				        });
 
-    	$success = Mail::send('emails.subscribe', $request->toArray(), function ($message)
-    	{
-	        $message->to('valmarkencia@gmail.com')
-	        		->from('valmarkencia@gmail.com', 'You received a subsciption email from valenciamark.com:')
-	        		->subject('Subscription for valenciamark.com');
-		});
-
-
-			if(!$success){
-
-				Mail::send('emails.subscription', $request->toArray(), function ($message)
+					if(!$success){
+							$email = new Email;
+							$email->msg = $request['msg'];
+							$email->email = $request['email'];
+							$email->save();
+							return 'success';
+						}
+				}
+		}
+		else
+		{
+			if (count($check_email) > 0)
+			{
+				return Redirect::to(URL::previous() . "#form-response")->with('email-exist', "Email already used. Please use another email.");
+			}
+			else
+			{
+		    	$success = Mail::send('emails.subscribe', $request->toArray(), function ($message)
 		    	{
 			        $message->to('valmarkencia@gmail.com')
-			        		->from('mark@valenciamark.com', 'Valenciamark admin')
-			        		->subject('Thank you for subscribing to Valenciamark');
+			        		->from('valmarkencia@gmail.com', 'You received a subsciption email from valenciamark.com:')
+			        		->subject('Subscription for valenciamark.com');
 				});
 
-				$email = new Email;
-				$email->msg = $request['msg'];
-				$check_email = Email::where('email', $request['email'])->firstOrFail();
-				if($check_email)
-				{
-					return Redirect::to(URL::previous() . "#form-response")->withInput()->with('email-exist', 'Email is already subscribed. Please use another email.');
-				}
-				else{
+				if(!$success){
+					$email = new Email;
+					$email->msg = $request['msg'];
 					$email->email = $request['email'];
 					$email->save();
-				return Redirect::to(URL::previous() . "#form-response")->with('status', "Thank you for subscribing!");
+					return Redirect::to(URL::previous() . "#form-response")->with('status', "Thank you for subscribing!");
+				}
+				else{
+					return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
 				}
 			}
-			else{
-				return Redirect::to(URL::previous() . "#form-response")->with('failed', "Something went wrong. Please try again later!");
-			}
-
-    }
+		
+    	}
+}
 }
