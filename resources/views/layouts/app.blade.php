@@ -70,17 +70,17 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <ul class="navbar-nav nav-links navbar-right">
-                    <li {{ setActive('/') }}><a href="{{ url('/') }}">Home</a></li>
-                    <li {{ setActive('works') }}><a href="{{ url('/works') }}">Works</a></li>
-                    <li {{ setActive('contact') }}><a href="{{ url('/contact') }}">Contact</a></li>
+                    <li {{ setActive('/') }}><a href="{{ url('/') }}" class="plinks">Home</a></li>
+                    <li {{ setActive('works') }}><a href="{{ url('/works') }}" class="plinks">Works</a></li>
+                    <li {{ setActive('contact') }}><a href="{{ url('/contact') }}" class="plinks">Contact</a></li>
                     @if(Auth::user())
                     <li><a href="{{ url('/tasks') }}">Tasks</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" id="dropdown-menu1">
                             Profile <span class="caret"></span>
                         </a>
 
-                        <ul class="dropdown-menu" role="menu">
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-menu1">
                             <li>
                                 <a href="{{ url('/logout') }}"
                                     onclick="event.preventDefault();
@@ -157,7 +157,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(function(){
-            $('a').on('click', function(){
+            $('.plinks').on('click', function(){
                 $('.content-loaded, nav , .footer').css('display', 'none');
                 $('.loading').css('display', 'block').fadeout();
             });

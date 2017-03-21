@@ -146,7 +146,19 @@ li.active a{
 .btn-primary{
 	background-color: #42B4E6;
 }
+.certificates
+{
+	margin-top: 50px;
+}
+.certificates img
+{
+	width: 100%;
+}
 
+.cert-img
+{
+	min-height: 145px;
+}
 .footer{
 	width: 100%;
 	text-align: center;

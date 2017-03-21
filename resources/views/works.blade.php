@@ -17,7 +17,7 @@
 			</div>
 			<div class="col-md-3 showcase">
 				<img src="/img/presentftl.jpg" alt="freelancer training london website design">
+
 			</div>
 		</div>
-		
 @endsection

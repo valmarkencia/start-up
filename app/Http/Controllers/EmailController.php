@@ -20,12 +20,10 @@ class EmailController extends Controller
     	});
 
 	if(!$success){
-
 		$email = new Email;
 		$email->email = $request['email'];
 		$email->msg = $request['msg'];
 		$email->save();
-
 		return redirect()->back()->with('sent-mail', "Message sent! Thank you for contacting me. I'll get back to you as soon as possible. Have a nice day!");
 	}
 	else{
