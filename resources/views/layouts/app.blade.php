@@ -7,8 +7,8 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="Mark Anthony Valencia is a creative web designer and developer. I offer web design and development, UI/UX design and graphic design.">
-    <meta name="keywords" content="website design,web design,full stack developer,web developer,website developer,UI design,user interface design,UX design,user experience design,graphic design,print design,web design freelancer,mark anthony valencia,valenciamark, Philippines web designer">
+    <meta name="description" content="Mark Anthony Valencia is the founder of Valencia Design Co., creative web designer and developer. The company offers web design and development, UI/UX design and graphic design.">
+    <meta name="keywords" content="Valencia Design Co., website design,web design,full stack developer,web developer,website developer,UI design,user interface design,UX design,user experience design,graphic design,print design,web design freelancer,mark anthony valencia,valenciamark, Philippines web designer">
 
     <title>Valencia Design Co. | {{ config('app.name', 'Portfolio') }}</title>
 
@@ -33,7 +33,7 @@
         {
           "@context": "http://schema.org",
           "@type": "WebPage",
-          "brand": "valenciamark",
+          "brand": "Valencia Design Co.",
           "url": "https://www.valenciamark.com",
           "description": "I am creative web designer and developer. I offer web design and development, UI/UX design and graphic design."
         }
@@ -64,7 +64,7 @@
             
             <!-- logo -->
             <div itemscope itemtype="http://schema.org/Organization">
-                <a itemprop="url" href="{{ url('/') }}" class="navbar-brand"><img itemprop="logo" class="logo" src="/img/logo.png" alt="valenciamark logo">Valenciamark</a>
+                <a itemprop="url" href="{{ url('/') }}" class="navbar-brand"><img itemprop="logo" class="logo" src="/img/logo.png" alt="valenciamark logo">Valencia Design Co.</a>
             </div>
             </div>
 
@@ -148,7 +148,7 @@
                 </form> 
             @endif
             </span>
-            <p style="margin-top:2%;">Copyright Valenciamark  2016 | All rights reserved.</p>
+            <p style="margin-top:2%;">Copyright Valencia Design Co. 2017 | All rights reserved.</p>
         </div>
     </footer>
     <!-- Scripts -->
